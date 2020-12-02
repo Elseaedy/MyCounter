@@ -39,3 +39,24 @@ c setCount: 5.
 c incrementBy5; incrementBy5.
 self assert: c getCount equals: 15
 ]
+
+{ #category : #tests }
+TestCounter >> testInitialize [
+	|c|
+	c:= Counter new.
+	self assert: c getCount equals: 0
+]
+
+{ #category : #tests }
+TestCounter >> testStartingAt5 [ 
+	|c|
+	c:= Counter startingAt:5.
+	self assert: c getCount equals: 5
+]
+
+{ #category : #tests }
+TestCounter >> testStartingAt5Increment [
+	|c|
+	c:= Counter startingAt:5.
+	self assert: (c increment; getCount )equals: 6
+]

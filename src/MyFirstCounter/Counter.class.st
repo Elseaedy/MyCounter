@@ -7,6 +7,11 @@ Class {
 	#category : #MyFirstCounter
 }
 
+{ #category : #accessing }
+Counter class >> startingAt: anInteger [
+	^ self new setCount: anInteger
+]
+
 { #category : #operation }
 Counter >> decrement [
 
@@ -27,6 +32,12 @@ Counter >> increment [
 { #category : #operations }
 Counter >> incrementBy5 [
 	count:= count +5
+]
+
+{ #category : #initialization }
+Counter >> initialize [ 
+	super initialize.
+	count := 0
 ]
 
 { #category : #acessing }
