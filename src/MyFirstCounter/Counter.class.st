@@ -40,6 +40,20 @@ Counter >> initialize [
 	count := 0
 ]
 
+{ #category : #accessing }
+Counter >> printOn: aStream [
+	super printOn: aStream.	"a counter"
+	aStream nextPutAll: ' WithValue: ', count printString.
+	aStream cr
+]
+
+{ #category : #accessing }
+Counter >> pritnOn: aStream [
+	super printOn: aStream.	"a counter"
+	aStream nextPutAll: ' WithValue: ', count printString.
+	aStream cr
+]
+
 { #category : #acessing }
 Counter >> setCount: anInteger [ 
 
